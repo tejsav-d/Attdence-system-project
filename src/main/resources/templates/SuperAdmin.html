@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Attendance Management</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/uniform.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+<link href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/loader.css" />
+
+
+
+</head>
+<body onload="onLoadPopulate()">
+
+<!--Header-part-->
+<div >
+  <h1 id="header" style="background-image: url('img/logo.png'); background-repeat: no-repeat"><a href="departmentDashboard" ></a></h1>
+</div>
+<!--close-Header-part--> 
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome Super Admin</span></a>
+      
+    </li>
+    
+    <li class=""><a title="" href="/"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+  </ul>
+</div>
+
+
+
+<div id="content">
+<!--  -->
+  <div align="center" id="content-header">
+  	
+  </div>
+  
+  <div class="container-fluid">
+  <div align="center">
+  <br>
+	 <p class="alert alert-error">
+	 	<b> !!Welcome Super Admin!! </b>
+	 	<br>
+	 	You can Create a Department Level Admin by filling out the registeration form..
+	 	These details will be forwarded to department admin via email..
+	 	<br>
+	 	You may delete Admin if has no department
+	 </p>
+	 
+   </div>
+    <div class="row-fluid">
+      <div class="span12">
+
+        <div class="widget-box">
+         
+          <div class="widget-content">
+            <a class="btn btn-warning btn-medium" href="#departmentFormModal" data-toggle="modal" >
+              + Add Admin 
+            </a> 
+            
+            
+       <!-- Form Starts Here -->     
+     
+      <div id="departmentFormModal" class="modal hide">
+        <div class="modal-header">
+          
+          <button data-dismiss="modal" class="close" type="button">×</button>
+          <h3>Admin Form</h3>
+        </div>
+        <div class="modal-body">
+          <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+            <h5>Admin-info</h5>
+          </div>
+          <div class="widget-content nopadding">
+          
+            <form action="javascript:void(0);" id="adminForm" method="get" class="form-horizontal">
+            
+             <div class="control-group">
+                <label class="control-label">Email: </label>
+                <div class="controls">
+                  <input type="email" name="email" class="span11" />
+                </div>
+              </div>
+            
+            
+              <div class="control-group">
+                <label class="control-label">Username: </label>
+                <div class="controls">
+                  <input type="text" name="username" class="span11" />
+                </div>
+              </div>
+              
+              <div class="control-group">
+                <label class="control-label">Password :</label>
+                <div class="controls">
+                  <input type="password" name="password" class="span11" />
+                </div>
+              </div>
+              
+              
+            </form>
+            
+          </div>
+          
+        </div>
+        <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary" onclick="addAdmin()"> Add </a> <a data-dismiss="modal" class="btn" href="#">Cancel</a> </div>
+      </div>
+      <!-- form Ends Here -->
+            
+            
+            <br><br>
+            <table class="table table-bordered">
+              
+              <thead>
+                <tr>
+                  <th>Sr no.</th>
+                  <th>Department</th>
+                  <th>Email</th>
+                  <th>Username</th>
+                  <th>Operations</th>
+                </tr>
+              </thead>
+              <tbody id="admins">
+              </tbody>
+                
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>
+<script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+<script src="PageFunctionality/SuperAdmin.js"></script> 
+<script src="javascripts/path.js"></script> 
+<!--end-Footer-part-->
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/matrix.tables.js"></script>
+</body>
+</html>
